@@ -31,17 +31,33 @@ console.log(calculateArea(2,5))
 // Then, Call the 'modifyArray' function with the 'numbers' array and a function that increments each number by 1
 // Useful Tutorial: https://youtu.be/H4awPsyugS0?si=7wC1B7whXVkG8X5l
 // Your code here
+const modifyArray = (arr, functionMod) => arr.map(element => functionMod(element))
 
+const numbers = [1, 2, 3, 4, 5]
+const modifiedNumbers = modifyArray(numbers, number => number * 3)
+
+console.log(modifiedNumbers);
 // Todo 4.4 See mathUtils.js for the instructions to create the add method and PI constant.
 // Then, import and call the add method here and display the value of the PI constant
 // Useful Tutorial: https://youtu.be/qgRUr-YUk1Q?si=ceAaeHJfCYCmeNWx
 // Your code here
-
+const { add, PI } = require("./mathUtils.js")
+console.log("Sum: ",add(5,2))
+console.log("Pi: ",PI)
 // Todo 4.5 See isPalindrome.js for the instructions to create the isPalindrome method.
 // Then, import and call the isPalindrome method here
 // Useful Tutorial: https://youtu.be/qgRUr-YUk1Q?si=ceAaeHJfCYCmeNWx
 // Your code here
-
+const {isPalindrome} = require("./isPalindrome.js")
+console.log(isPalindrome("Radar"))
+console.log(isPalindrome("Potato"))
 // Checkpoint 4.3 What does the require function and module.exports variable do?
 // Should we use it over the import and export keywords? Why? Research your answer.
 // Answer: 
+// require is to import function in other modules
+// module.exports is exposing function from the modules
+/*
+To be completely honest they both do almos the exact same though depends on what kind of module syntax you are using
+as it can impact on how the code can work as it I had to use the CommonJS rather than the ECMAScript module. I would prefer
+the ECMAScript as just using import/export is easier though it can affect the rest when it comes to using JS syntax in the code.
+*/
