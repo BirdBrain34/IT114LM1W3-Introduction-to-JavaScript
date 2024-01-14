@@ -8,14 +8,22 @@
 // Todo 4.1 Declare a function named 'greet' that takes one parameter 'name' and displays a greeting
 // Then, Call the 'greet' function with your name as the argument
 // Your code here
-
+greet("Lance")
+function greet(name){
+    console.log("Hello ",name)
+}
 // Checkpoint 4.1 What is the difference between a function declaration and a function expression?
 // Answer: 
+//Function Declaration: variables can be called anywhere on the code and can be called before or after the declaration of the code
+//Function Expression: can create a variable as a function thought can be called after the declaration of the code
 
 // Todo 4.2 Declare a function expression named 'calculateArea' that takes the length and width of a rectangle and returns its area
 // Then, Call the 'calculateArea' function with any length and width as arguments
 // Your code here
-
+let calculateArea = function(length,width){
+    return length*width
+}
+console.log(calculateArea(2,5))
 // Checkpoint 4.2 What is a callback function? Provide an example.
 // Answer: 
 

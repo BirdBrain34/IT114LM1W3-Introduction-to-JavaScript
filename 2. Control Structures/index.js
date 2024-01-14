@@ -33,11 +33,11 @@ if (randomNumber % 3 === 0 && randomNumber % 5 === 0)
 {
     console.log("fizzbuzz")
 }
-else if (randomNumber % 3 === 0) 
+if (randomNumber % 3 === 0) 
 {
     console.log("fizz")
 }
-else if(randomNumber % 5 === 0)
+if(randomNumber % 5 === 0)
 {
     console.log("buzz")
 }
@@ -70,6 +70,8 @@ while (j < list.length)
 }
 // Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
+//While loop: Pre-condition loop
+//Do while loop: Post-condition loop
 
 // TODO 2.7 Use a for of loop to display all the values in the list
 // Your code here
@@ -107,12 +109,10 @@ try{
     if(denominator === 0){
         throw new Error("Division by zero error")
     } else {
-        console.log(numerator / denominator);
+        console.log("Current Quotient: ",numerator / denominator);
     }
-
-    console.log("Current Quotient: ",quotient)
 }catch (error){
-    if (error.message === "Division by zero")
+    if (error.message === "Division by zero error")
     {
         console.log("Error! the value has been divided by zero")
     }
